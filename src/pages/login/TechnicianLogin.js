@@ -63,7 +63,7 @@ export default class Login extends React.Component {
             variant="h5"
             sx={{ color: "#c51383", fontWeight: "bold" }}
           >
-            Login
+            Technician Login
           </Typography>
           <Box
             component="form"

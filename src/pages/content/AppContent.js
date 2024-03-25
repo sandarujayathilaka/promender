@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { request, setAuthHeader } from "../../config/axiosConfig";
 import AuthContent from "./AuthContent";
-import Login from "../login/MainLogin";
+import LoginForm from "../login/LoginForm";
 
 export default class AppContent extends React.Component {
   constructor(props) {
@@ -51,7 +51,7 @@ export default class AppContent extends React.Component {
       <>
         <p></p>
         {this.state.componentToShow === "login" && (
-          <Login onLogin={this.onLogin} onRegister={this.onRegister} />
+          <LoginForm onLogin={this.onLogin} onRegister={this.onRegister} />
         )}
         {this.state.componentToShow === "messages" && <AuthContent />}
       </>

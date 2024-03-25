@@ -1,13 +1,13 @@
-import React from "react";
-import AppHeader from "../../components/header/PageHeader";
-import NavigationBar from "../../components/appBar/AppBar";
-import { Typography } from "@mui/material";
+import React from 'react'
+import PageHeader from '../../components/header/PageHeader';
+import { Typography } from '@mui/material';
+import NavBar from '../../components/appBar/AppBar';
 
-export default function Home(){
+const Home = () => {
   return (
     <>
-      <AppHeader />
-      <NavigationBar />
+      <PageHeader />
+      <NavBar/>
       <Typography
         padding={2}
         component="h3"
@@ -19,6 +19,8 @@ export default function Home(){
       >
         Home
       </Typography>
-</>
+    </>
   );
-};
+}
+
+export default Home;

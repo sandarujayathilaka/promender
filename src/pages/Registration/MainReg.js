@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import { Grid, Button, Box, Container } from "@mui/material";
 import AppHeader from "../../components/header/PageHeader";
 import NavigationBar from "../../components/appBar/AppBar";
-import TechnicianLogin from "../login/TechnicianLogin";
-import CustomerLogin from "./CustomerLogin";
+import CustomerReg from "./CustomerReg";
+import TechnicianReg from "./TechnicianReg";
 
-const MainLogin = () => {
+const MainReg = () => {
   const [active, setActive] = useState("customer");
 
   return (
     <>
-      <AppHeader />
-      <NavigationBar />
+      <div>
+        <AppHeader />
+        <NavigationBar />
+      </div>
+
       <Container component="main" maxWidth="sm">
         <Box component="form" noValidate sx={{ mt: 3 }}>
           <Grid
@@ -34,7 +37,7 @@ const MainLogin = () => {
                 }}
                 onClick={() => setActive("customer")}
               >
-                Customer Login
+                Customer Registration
               </Button>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -48,17 +51,17 @@ const MainLogin = () => {
                 }}
                 onClick={() => setActive("technician")}
               >
-                Technician Login
+                Technician Registration
               </Button>
             </Grid>
           </Grid>
 
-          {active === "customer" && <CustomerLogin />}
-          {active === "technician" && <TechnicianLogin />}
+          {active === "customer" && <CustomerReg />}
+          {active === "technician" && <TechnicianReg />}
         </Box>
       </Container>
     </>
   );
 };
 
-export default MainLogin;
+export default MainReg;

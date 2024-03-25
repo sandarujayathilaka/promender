@@ -10,7 +10,7 @@ export default class AuthContent extends React.Component {
   }
 
   componentDidMount() {
-    request("GET", "/", {})
+    request("GET", "/messages", {})
       .then((response) => {
         this.setState({ data: response.data });
       })
@@ -30,6 +30,7 @@ export default class AuthContent extends React.Component {
           <div className="card" style={{ width: "18rem" }}>
             <div className="card-body">
               <h5 className="card-title">Backend response</h5>
+              <p>{this.state.data}</p> {/* Display the response data here */}
             </div>
           </div>
         </div>
